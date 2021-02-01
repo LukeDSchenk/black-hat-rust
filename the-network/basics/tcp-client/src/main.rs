@@ -23,11 +23,11 @@ fn main() {
     }
 
     // note to self, you can't just use read_to_string() here because the socket EOF is never reached
-    let mut buffer: [u8; 4096] = [0; 4096];
+    let mut buffer: [u8; 4096] = [0; 4096]; // initializes u8 (byte array) with 4096 zeros
     match stream.read(&mut buffer) {
         Ok(_bytes_read) => println!("{}", String::from_utf8_lossy(&buffer)),
         Err(e) => {
-            eprintln!("could not read data over socket: {}", e);
+            eprintln!("could not read data over TCP stream: {}", e);
             process::exit(3);
         }
     }
