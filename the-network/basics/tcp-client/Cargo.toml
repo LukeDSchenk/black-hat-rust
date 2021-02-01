@@ -1,5 +1,5 @@
 [package]
-name = "black-hat-rust"
+name = "tcp-client"
 version = "0.1.0"
 authors = ["Luke <nineofpine@protonmail.com>"]
 edition = "2018"
