@@ -1,4 +1,4 @@
-// UDP client found on page 11
+// UDP client found on page 11.
 use std::process;
 use std::net::UdpSocket;
 

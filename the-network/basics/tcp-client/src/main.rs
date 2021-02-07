@@ -1,4 +1,4 @@
-// TCP client found on page 10
+// TCP client found on page 10.
 use std::io::{Read, Write};
 use std::process;
 use std::net::TcpStream;
@@ -15,7 +15,7 @@ fn main() {
     };
 
     match stream.write(b"GET / HTTP/1.1\r\nHost: google.com\r\n\r\n") {
-        Ok(_bytes_written) => (),
+        Ok(_bytes_written) => (), // do nothing on success
         Err(e) => {
             eprintln!("could not write data over socket: {}", e);
             process::exit(2);
